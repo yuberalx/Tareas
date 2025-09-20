@@ -10,10 +10,11 @@
 
 # Descripción
 
-Un proyecto simple de Laravel + React (Inertia) para gestión de tareas (CRUD + toggle), con API protegida por Sanctum.
-Esta guía explica cómo clonar, instalar, ejecutar y desplegar la app, además de los comandos útiles y las rutas principales.
+Un proyecto simple de Laravel + React (Inertia) para la gestión de tareas (CRUD + toggle), con API protegida por Sanctum.
+Esta guía explica cómo clonar, instalar, ejecutar y desplegar la aplicación, además de listar los comandos útiles y las rutas principales.
 
-Ademas del API este proyecto cuenta con una vista from desarrollada en React, donde se puede 
+Además del API, este proyecto cuenta con una vista frontend desarrollada en React, donde se puede:
+
 * Ver
 * Crear
 * Editar
@@ -31,8 +32,8 @@ Ademas del API este proyecto cuenta con una vista from desarrollada en React, do
   
 ## Configurar el archivo * .env.example pasarlo a * .env
 
-Tener el cuenta que se debe editar o agregar el archivo .env para las variables de entorno, principalmente la de las conexion a la base de datos, en mi paso postgres
-## Comandos
+Es necesario copiar el archivo .env.example a .env y editarlo con las variables de entorno, principalmente las de conexión a la base de datos (en este caso PostgreSQL).
+## Comandos de instalación y ejecución
 
 ```
 git clone https://github.com/yuberalx/Tareas.git
@@ -50,12 +51,13 @@ php artisan serve --host=127.0.0.1 --port=8000
 ## Rutas solo API
 * POST /api/register (Registrarnos en el API)
 * POST /api/login (login API para obtener el token)
-## Usamos en los Headers Authorization y en el valor: Bearer tu-token-devuelto-ruta-anterior
+## Usamos en los Headers Authorization y en el valor: Bearer <tu-token> y Accept: application/json
 * GET /api/tareas → listar
 * POST /api/tareas → crear (JSON)
 * PUT /api/tareas/{tarea} → Editar datos de la tarea
-* PATCH /api/tareas/42/toggle → actualizar estado
+* PATCH /api/tareas/42/toggle → Cambiar estado (completada/pendiente)
 * DELETE /api/tareas/{id} → eliminar
 
-Espero que el proyecto sea intuitivo y fácil de desplegar, cualquier duda estaré dispuesto a colaborar
+Espero que el proyecto sea intuitivo y fácil de desplegar.
+Cualquier duda, estaré dispuesto a colaborar.
 
